@@ -26,12 +26,12 @@ function onClick(evt) {
 
     
     const instance = basicLightbox.create(
-        `<img src='${evt.target.dataset.source}' width=600 height=800px>`);
+        `<img src='${evt.target.dataset.source}' width=600 height=800px>`,
 
     {
-        onShow: (instance) => { document.addEventListener('keydown', onEscBtnClose) };
-        onClose: (instance) => { document.removeEventListener('keydown', onEscBtnClose) };
-    }
+        onShow: (instance) => { document.addEventListener('keydown', onEscBtnClose) },
+        onClose: (instance) => { document.removeEventListener('keydown', onEscBtnClose) }
+    })
     
     instance.show();
 
